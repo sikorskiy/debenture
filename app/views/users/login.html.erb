@@ -1,0 +1,8 @@
+<h3>Авторизация</h3>
+<%=link_to 'Регистрация', new_user_path %>
+<a href="/info">Информация</a>
+<%=form_for :user do |f| %>
+  <br><%=f.text_field :username, placeholder:'Логин'%></br>
+  <%=f.text_field :password, placeholder:'Пароль' %>
+  <br><%=f.submit 'Войти' %></br>
+<% end %>

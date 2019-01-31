@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users, :debentures
+
+  post 'login', to:'users#check', as:'post_login'
+  get 'login', to:'users#login', as:'user_login'
+
+  get 'logout', to:'users#log_out', as:'logout'
+
+  get 'info', to:'users#info'
+
+  root 'users#login'
 end

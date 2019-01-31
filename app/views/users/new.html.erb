@@ -1,0 +1,7 @@
+<h3>Реггистрация</h3>
+<%= form_for @user do |f|%>
+  <br><%= f.text_field :username, placeholder:'Логин' %></br>
+  <%= f.text_field :password, placeholder:'Пароль' %>
+  <br><%= f.text_field :email, placeholder:'E-mail' %></br>
+  <%= f.submit 'Отправить' %>
+<% end %>
